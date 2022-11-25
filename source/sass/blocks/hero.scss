@@ -1,5 +1,9 @@
 .hero__container {
   display: flex;
+
+  @include vp-1199 {
+    justify-content: center;
+  }
 }
 
 .hero__list {
@@ -19,6 +23,7 @@
 
   @include vp-767 {
     margin: 171px 0 0 0;
+    justify-self: flex-end;
   }
 }
 
@@ -27,13 +32,12 @@
    grid-template-columns: minmax(150px, auto) minmax(250px, 310px);
 
   @include vp-1199 {
-    grid-template-columns: minmax(22px, 200px) minmax(150px, 600px);
-    max-width: 600px;
+    grid-template-columns: minmax(22px, 125px) minmax(150px, 270px);
   }
 
   @include vp-767 {
     max-width: unset;
-    grid-template-columns: minmax(85px, 200px) minmax(150px, 600px);
+    grid-template-columns: minmax(85px, 368px) minmax(150px, 368px);
   }
 }
 
@@ -54,6 +58,11 @@
     margin-right: 0;
     overflow: visible;
     padding-top: 46px;
+    justify-self: flex-start;
+  }
+
+  @include vp-374 {
+    justify-self: unset;
   }
 }
 
