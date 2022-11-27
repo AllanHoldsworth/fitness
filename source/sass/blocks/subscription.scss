@@ -1,0 +1,40 @@
+.subscription {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: $color-ghost-white;
+  z-index: 1;
+
+  @include vp-1199 {
+    padding-top: 101px;
+  }
+
+  @include vp-767 {
+    padding-top: 63px;
+    padding-bottom: 70px;
+  }
+}
+
+.subscription__title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-right: 14px;
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    margin-right: 10px;
+  }
+}
+
+.subscription__bg-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}

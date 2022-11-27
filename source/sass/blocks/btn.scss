@@ -1,21 +1,13 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
-
+  display: block;
+  font-family: $ff-primary;
+  padding: 19px 0;
+  border: 4px solid #FFFFFF;
   color: $color-default-white;
-
-  border: none;
-  cursor: pointer;
-
-  transition: opacity $trans-default;
-
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
-  }
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
 }

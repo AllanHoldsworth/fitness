@@ -1,3 +1,4 @@
+/* eslint-disable max-nested-callbacks */
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 
@@ -7,6 +8,29 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
   // ---------------------------------
+  let toggles = document.querySelectorAll('.tabs__toggle');
+  let tabs = document.querySelectorAll('.tabs__content');
+
+  toggles.forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      let currentToggle = toggle;
+      let tabId = currentToggle.getAttribute('data-tab');
+      let currentTab = document.querySelector(tabId);
+
+      if (!currentToggle.classList.contains('tabs__toggle--active')) {
+        toggles.forEach((item) => {
+          item.classList.remove('tabs__toggle--active');
+        });
+
+        tabs.forEach((tab) => {
+          tab.classList.remove('tabs__content--active');
+        });
+
+        currentToggle.classList.add('tabs__toggle--active');
+        currentTab.classList.add('tabs__content--active');
+      }
+    });
+  });
 
   iosVhFix();
 

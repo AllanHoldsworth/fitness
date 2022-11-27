@@ -44,6 +44,15 @@
   line-height: 31px;
   letter-spacing: 0.03em;
   color: $color-default-white;
+  transition: color 230ms ease;
+
+  &:hover {
+    color: $color-sapphire;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   @include vp-1199 {
     font-size: 24px;
