@@ -1,6 +1,7 @@
 /* eslint-disable max-nested-callbacks */
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import Swiper, {Navigation} from 'swiper';
 
 // ---------------------------------
 
@@ -30,6 +31,20 @@ window.addEventListener('DOMContentLoaded', () => {
         currentTab.classList.add('tabs__content--active');
       }
     });
+  });
+
+  Swiper.use([Navigation]);
+
+  const swiper = new Swiper('.swiper', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: '4',
+    spaceBetween: 40,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
 
   iosVhFix();

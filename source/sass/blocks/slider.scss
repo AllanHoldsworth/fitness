@@ -1,0 +1,34 @@
+.swiper {
+  width: 100%;
+  height: 294px;
+  position: relative;
+}
+
+.swiper__outer-wrapper {
+  position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  height: 100%;
+  top: 22px;
+  color: #afafaf;
+  background-image: url("../img/svg/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.swiper-button-prev {
+  left: -60px;
+  transform: scale(-1, 1);
+}
+
+.swiper-button-next {
+  right: -60px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}

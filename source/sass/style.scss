@@ -14,6 +14,7 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "vendor/swiper.scss";
 @import "global/title.scss";
 
 // Blocks
@@ -28,6 +29,9 @@
 @import "blocks/subscription.scss";
 @import "blocks/tabs.scss";
 @import "blocks/promo.scss";
+@import "blocks/coaches.scss";
+@import "blocks/slider.scss";
+@import "blocks/slide.scss";
 
 // ---------------------------------
 
