@@ -41,6 +41,26 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesPerView: '4',
     spaceBetween: 40,
 
+    breakpoints: {
+      320: {
+        slidesPerView: '1',
+        spaceBetween: 0,
+        initialSlide: 2,
+      },
+
+      766: {
+        slidesPerView: '2',
+        spaceBetween: 30,
+        initialSlide: 2,
+      },
+
+      1199: {
+        slidesPerView: '4',
+        spaceBetween: 40,
+        initialSlide: 0,
+      },
+    },
+
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',

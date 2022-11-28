@@ -5,4 +5,13 @@
 .coaches__title {
   margin-top: 0;
   margin-bottom: 47px;
+
+  @include vp-1199 {
+    margin-right: 7px;
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 42px;
+  }
 }

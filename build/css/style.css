@@ -2301,6 +2301,8 @@ button.swiper-pagination-bullet {
   left: 0;
   -o-object-fit: cover;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .slide__list {
@@ -2320,6 +2322,59 @@ button.swiper-pagination-bullet {
 
 .slide__item:not(:last-child) {
   margin-bottom: 13px;
+}
+
+.advantages {
+  padding: 120px 0;
+  background-color: #f8f9fc;
+}
+
+.advantages__title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.advantages__list {
+  padding: 0;
+  margin: 0 auto;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  width: 1040px;
+  -ms-grid-columns: 400px 240px 400px;
+  grid-template-columns: 400px 240px 400px;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.advantages__value-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.advantages__value {
+  font-size: 71px;
+  line-height: 106px;
+  margin: 0;
+  font-weight: 700;
+  background: -o-linear-gradient(322.39deg, #D10A42 0%, #0041CA 45.58%);
+  background: linear-gradient(127.61deg, #D10A42 0%, #0041CA 45.58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.advantages__note {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #2e35ac;
 }
 
 /* @mixin hover-focus {
@@ -2581,6 +2636,7 @@ button.swiper-pagination-bullet {
 
   .promo {
     padding-top: 80px;
+    padding-bottom: 100px;
   }
 
   .promo__card {
@@ -2589,7 +2645,7 @@ button.swiper-pagination-bullet {
   }
 
   .promo__description-wrapper {
-    padding: 47px 43px 20px 43px;
+    padding: 17px 43px 20px 43px;
   }
 
   .promo__title-wrapper {
@@ -2647,6 +2703,16 @@ button.swiper-pagination-bullet {
     font-size: 10px;
     line-height: 12px;
     border-width: 2px;
+  }
+
+  .coaches__title {
+    margin-right: 7px;
+    margin-bottom: 30px;
+  }
+
+  .swiper__outer-wrapper {
+    width: 563px;
+    margin: 0 auto;
   }
 }
 
@@ -2863,6 +2929,7 @@ button.swiper-pagination-bullet {
 
   .promo {
     padding-top: 70px;
+    padding-bottom: 64px;
   }
 
   .promo__card {
@@ -2880,6 +2947,35 @@ button.swiper-pagination-bullet {
 
   .promo__image-wrapper {
     min-height: 292px;
+  }
+
+  .coaches__title {
+    margin-bottom: 42px;
+  }
+
+  .swiper {
+    height: 274px;
+  }
+
+  .swiper__outer-wrapper {
+    width: 226px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-size: 50% 50%;
+  }
+
+  .swiper-button-prev {
+    left: -40px;
+  }
+
+  .swiper-button-next {
+    right: -40px;
+  }
+
+  .slide__image {
+    height: 274px;
   }
 }
 

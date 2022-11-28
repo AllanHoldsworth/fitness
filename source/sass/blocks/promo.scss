@@ -4,10 +4,12 @@
 
   @include vp-1199 {
     padding-top: 80px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
     padding-top: 70px;
+    padding-bottom: 64px;
   }
 }
 
@@ -33,7 +35,7 @@
   align-items: center;
 
   @include vp-1199 {
-    padding: 47px 43px 20px 43px;
+    padding: 17px 43px 20px 43px;
   }
 
   @include vp-767 {
