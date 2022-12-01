@@ -1,0 +1,24 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 97px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  list-style-type: none;
+  gap: 11px;
+
+  @include vp-767 {
+    margin-left: 0;
+  }
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $color-default-white;
+  width: 25px;
+  height: 25px;
+}

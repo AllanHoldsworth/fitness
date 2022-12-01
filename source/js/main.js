@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   Swiper.use([Navigation]);
 
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.slider', {
     direction: 'horizontal',
     loop: true,
     slidesPerView: '4',
@@ -62,8 +62,19 @@ window.addEventListener('DOMContentLoaded', () => {
     },
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.slider-button-next',
+      prevEl: '.slider-button-prev',
+    },
+  });
+
+  const carousel = new Swiper('.carousel', {
+    direction: 'horizontal',
+    loop: false,
+    slidesPerView: '1',
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.carousel-button-next',
+      prevEl: '.carousel-button-prev',
     },
   });
 

@@ -1,5 +1,5 @@
-.swiper {
-  width: 100%;
+.slider {
+  width: min(100%, 1160px);
   height: 294px;
   position: relative;
 
@@ -8,7 +8,7 @@
   }
 }
 
-.swiper__outer-wrapper {
+.slider__outer-wrapper {
   position: relative;
 
   @include vp-1199 {
@@ -36,17 +36,25 @@
   }
 }
 
-.swiper-button-prev {
+.slider-button-prev {
   left: -60px;
   transform: scale(-1, 1);
+
+  @media(max-width: 1325px) {
+    left: -20px;
+  }
 
   @include vp-767 {
     left: -40px;
   }
 }
 
-.swiper-button-next {
+.slider-button-next {
   right: -60px;
+
+  @media(max-width: 1325px) {
+    right: -20px;
+  }
 
   @include vp-767 {
     right: -40px;
