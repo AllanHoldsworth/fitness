@@ -11,6 +11,31 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   let toggles = document.querySelectorAll('.tabs__toggle');
   let tabs = document.querySelectorAll('.tabs__content');
+  let tabsBody = document.querySelector('.tabs__body');
+  const anchor = document.querySelector('a[href="#sub"]');
+  const video = document.querySelector('.gym__video');
+  const playButton = document.querySelector('.gym__play-btn');
+  const videoImg = document.querySelector('.gym__video-img');
+
+  tabsBody.classList.remove('tabs__body--nojs');
+
+  playButton.addEventListener('click', () => {
+    videoImg.style.display = 'none';
+    playButton.style.display = 'none';
+    video.style.display = 'block';
+    video.play();
+  });
+
+  if (anchor) {
+    anchor.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      const blockID = anchor.getAttribute('href');
+      document.querySelector('' + blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    });
+  }
 
   toggles.forEach((toggle) => {
     toggle.addEventListener('click', () => {

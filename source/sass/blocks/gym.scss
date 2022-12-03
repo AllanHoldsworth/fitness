@@ -123,20 +123,26 @@
 
 .gym__video-wrapper {
   position: absolute;
-  bottom: -29%;
+  width: 364px;
+  height: 228px;
+  top: 286px;
   left: -9.6%;
 
   @include vp-1199 {
-    width: 39%;
+    width: 38%;
+    min-height: 167px;
+    min-width: 266px;
     height: auto;
+    top: unset;
     bottom: -48%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
   }
 
   @include vp-767 {
     min-height: 167px;
     aspect-ratio: 2/1;
+    top: unset;
     bottom: unset;
     left: unset;
     position: relative;
@@ -154,25 +160,53 @@
   }
 }
 
+.gym__video {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+
+  @include vp-767 {
+    transform: unset;
+    position: static;
+    width: 100%;
+  }
+}
+
 .gym__play-btn {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 72px;
-  height: 72px;
+  padding: 0;
+  width: 100px;
+  cursor: pointer;
+  height: 100px;
   border: none;
-  background-image: url("../img/svg/play.svg"),
-  linear-gradient(44.89deg, #003D85 25.38%, #B80027 74.89%);
+  background-color: transparent;
+  background-image: url("../img/svg/ellipse.svg"), url("../img/svg/playbtn.svg");
   border-radius: 50%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat, no-repeat;
   background-position: center center;
-  background-size: auto;
+  background-size: 100% 100%, 72px 72px;
+  transition: all 200ms ease;
+
+  &:focus-visible {
+    outline: 3px solid $color-default-black;
+  }
+
+  &:hover {
+    background-color: rgba(168, 32, 82, 0.5);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 
   @include vp-1199 {
-    width: 52px;
-    height: 52px;
-    background-size: 12px 12px, auto;
+    width: 73px;
+    height: 73px;
+    background-size: 100% 100%, 52px 52px;
   }
 }
 

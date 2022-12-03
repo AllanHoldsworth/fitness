@@ -1,3 +1,11 @@
+.hero {
+  padding-bottom: 50px;
+
+  @include vp-767 {
+    padding-bottom: 60px;
+  }
+}
+
 .hero__container {
   display: flex;
 
@@ -32,12 +40,14 @@
    grid-template-columns: minmax(150px, auto) minmax(250px, 310px);
 
   @include vp-1199 {
-    grid-template-columns: minmax(22px, 125px) minmax(150px, 270px);
+    grid-template-columns: 114px 226px;
+    column-gap: 14px;
   }
 
   @include vp-767 {
-    max-width: unset;
-    grid-template-columns: minmax(85px, 368px) minmax(150px, 368px);
+    column-gap: unset;
+    width: 100%;
+    grid-template-columns: minmax(85px, auto) minmax(150px, auto);
   }
 }
 
@@ -61,7 +71,7 @@
     justify-self: flex-start;
   }
 
-  @include vp-374 {
+  @include vp-328 {
     justify-self: unset;
   }
 }
@@ -78,13 +88,9 @@
   margin-bottom: 15px;
 
   @include vp-1199 {
-    font-size: 42px;
+    font-size: 34px;
     line-height: 41px;
     margin: 0 5px 8px 0;
-  }
-
-  @include vp-1023 {
-    font-size: 34px;
   }
 
   @include vp-767 {
@@ -107,14 +113,8 @@
 
   @include vp-1199 {
     text-transform: none;
-    font-size: 88px;
-    line-height: 86px;
-    margin-bottom: 36px;
-  }
-
-  @include vp-1023 {
-    margin-bottom: 0;
     font-size: 72px;
+    line-height: 86px;
   }
 }
 
@@ -122,13 +122,17 @@
   width: 234px;
   margin-left: 13px;
   align-self: flex-start;
-  margin-bottom: 47px;
   grid-column: 2/3;
-  transition: all 230ms ease;
+
+  &:focus-visible {
+    border-image: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image-slice: 1;
+    outline: 2px solid $color-default-black;
+  }
 
   &:hover {
-    color: $color-black-russian;
-    border-color: $color-default-black;
+    border-image: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image-slice: 1;
   }
 
   &:active {
@@ -136,12 +140,13 @@
   }
 
   @include vp-1199 {
-    justify-self: center;
-    width: 78%;
-    margin: 15px 0 0 0;
+    width: 83%;
+    margin: 15px 0 0 10px;
   }
 
   @include vp-767 {
+    justify-self: center;
+    margin-left: 0;
     width: 100%;
     grid-column: 1/-1;
     margin-top: 24px;
@@ -150,16 +155,14 @@
 
 .hero__img {
   width: 500px;
-  height: 606px;
+  height: 558px;
   margin-top: -49px;
-  padding-bottom: 49px;
   flex: 0 0 auto;
 
   @include vp-1199 {
     width: 324px;
     height: 390px;
     margin-top: 0;
-    padding-bottom: 0;
     object-fit: cover;
   }
 

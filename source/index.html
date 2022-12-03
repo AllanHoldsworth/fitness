@@ -52,9 +52,12 @@
                   <span class="hero__subtitle">омск</span>
                   <h1 class="hero__title">Фитнес <br> центр</h1>
                 </div>
-                <a class="hero__link btn" href="#">Купить абонемент</a> <!--?-->
+                <a class="hero__link btn" href="#sub">Купить абонемент</a> <!--?-->
               </div>
-              <img class="hero__img" src="img/hero.jpg" srcset="img/hero@2x.jpg 2x" width="500" height="556" alt="Изображение супер тренера.">
+              <picture>
+                <source type="image/webp" srcset="img/hero.webp 1x, img/hero@2x.webp 2x">
+                <img class="hero__img" src="img/hero.jpg" srcset="img/hero@2x.jpg 2x" width="500" height="556" alt="Изображение супер тренера.">
+              </picture>
             </div>
           </section>
         </div>
@@ -70,24 +73,34 @@
               </p>
             </div>
             <div class="gym__image-wrapper">
-              <img class="gym__image" src="img/gym.jpg" srcset="img/gym@2x.jpg" width="660" height="401" alt="Изображение стортзала.">
+              <picture>
+                <source type="image/webp" srcset="img/gym.webp 1x, img/gym@2x.webp 2x">
+                <img class="gym__image" src="img/gym.jpg" srcset="img/gym@2x.jpg" width="660" height="401" alt="Изображение стортзала.">
+              </picture>
               <div class="gym__video-wrapper">
-                <img class="gym__video-img" src="img/video-bg.jpg" srcset="img/video-bg@2x.jpg" width="364" height="228" alt="Фон видеоплеера.">
+                <picture>
+                  <source type="image/webp" srcset="img/video-bg.webp 1x, img/video-bg@2x.webp 2x">
+                  <img class="gym__video-img" src="img/video-bg.jpg" srcset="img/video-bg@2x.jpg" width="364" height="228" alt="Обложка видеоплеера.">
+                </picture>
+                <video class="gym__video" controls="true" allowfullscreen="true" width="364" height="228">
+                  <source src="img/video/video.mp4" type="video/mp4">
+                  <source src="img/video/video.webm" type="video/webm">
+                </video>
                 <button class="gym__play-btn" type="button"></button>
               </div>
             </div>
           </div>
         </section>
-        <section class="subscription">
+        <section class="subscription" id="sub">
           <div class="container">
             <h2 class="subscription__title title">Абонементы</h2>
             <div class="subscription__tabs tabs">
               <div class="tabs__head">
-                <span class="tabs__toggle tabs__toggle--active" data-tab="#tab_1">1 месяц</span>
-                <span class="tabs__toggle" data-tab="#tab_2">6 месяцев</span>
-                <span class="tabs__toggle" data-tab="#tab_3">12 месяцев</span>
+                <button class="tabs__toggle tabs__toggle--active" type="button" data-tab="#tab_1">1 месяц</button>
+                <button class="tabs__toggle" type="button" data-tab="#tab_2">6 месяцев</button>
+                <button class="tabs__toggle" type="button" data-tab="#tab_3">12 месяцев</button>
               </div>
-              <div class="tabs__body">
+              <div class="tabs__body tabs__body--nojs">
                 <div class="tabs__content tabs__content--active" id="tab_1">
                   <ul class="tabs__list">
                     <li class="tabs__item">
@@ -183,7 +196,7 @@
                 </div>
               </div>
             </div>
-            <!-- <img class="subscription__bg-img" src="img/barbell.png" srcset="img/barbell@2x.png" width="321" height="384" alt="Изображение блинов от штанги."> -->
+            <img class="subscription__bg-img" src="img/barbell.png" srcset="img/barbell@2x.png" width="289" height="345" alt="Изображение блинов от штанги.">
           </div>
         </section>
         <section class="promo">
