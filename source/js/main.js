@@ -1,7 +1,6 @@
-/* eslint-disable max-nested-callbacks */
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import Swiper, {Navigation} from 'swiper';
+import Swiper, {Navigation, Keyboard} from 'swiper';
 
 // ---------------------------------
 
@@ -10,21 +9,24 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
   let toggles = document.querySelectorAll('.tabs__toggle');
-  let tabs = document.querySelectorAll('.tabs__content');
-  let tabsBody = document.querySelector('.tabs__body');
+  let tabs = document.querySelector('.tabs__head');
+  let tabsContent = document.querySelectorAll('.tabs__content');
+  // let tabsBody = document.querySelector('.tabs__body');
   const anchor = document.querySelector('a[href="#sub"]');
   const video = document.querySelector('.gym__video');
   const playButton = document.querySelector('.gym__play-btn');
   const videoImg = document.querySelector('.gym__video-img');
 
-  tabsBody.classList.remove('tabs__body--nojs');
+  // tabsBody.classList.remove('tabs__body--nojs');
 
-  playButton.addEventListener('click', () => {
-    videoImg.style.display = 'none';
-    playButton.style.display = 'none';
-    video.style.display = 'block';
-    video.play();
-  });
+  if (playButton) {
+    playButton.addEventListener('click', () => {
+      videoImg.style.display = 'none';
+      playButton.style.display = 'none';
+      video.style.display = 'block';
+      video.play();
+    });
+  }
 
   if (anchor) {
     anchor.addEventListener('click', (evt) => {
@@ -37,30 +39,31 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  toggles.forEach((toggle) => {
-    toggle.addEventListener('click', () => {
-      let currentToggle = toggle;
+  if (tabs) {
+    tabs.addEventListener('click', (evt) => {
+      let currentToggle = evt.target;
       let tabId = currentToggle.getAttribute('data-tab');
       let currentTab = document.querySelector(tabId);
-
-      if (!currentToggle.classList.contains('tabs__toggle--active')) {
+      if (!currentToggle.classList.contains('tabs__toggle-active')) {
         toggles.forEach((item) => {
           item.classList.remove('tabs__toggle--active');
         });
-
-        tabs.forEach((tab) => {
-          tab.classList.remove('tabs__content--active');
-        });
-
-        currentToggle.classList.add('tabs__toggle--active');
-        currentTab.classList.add('tabs__content--active');
       }
+      tabsContent.forEach((tab) => {
+        tab.classList.remove('tabs__content--active');
+      });
+      currentToggle.classList.add('tabs__toggle--active');
+      currentTab.classList.add('tabs__content--active');
     });
-  });
+  }
 
   Swiper.use([Navigation]);
+  Swiper.use([Keyboard]);
 
   const swiper = new Swiper('.slider', {
+    keyboard: {
+      enabled: true,
+    },
     direction: 'horizontal',
     loop: true,
     slidesPerView: '4',
@@ -80,6 +83,12 @@ window.addEventListener('DOMContentLoaded', () => {
       },
 
       1199: {
+        slidesPerView: '4',
+        spaceBetween: 30,
+        initialSlide: 0,
+      },
+
+      1250: {
         slidesPerView: '4',
         spaceBetween: 40,
         initialSlide: 0,

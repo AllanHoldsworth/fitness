@@ -1,14 +1,22 @@
 .slider {
-  width: min(100%, 1160px);
+  width: 100%;
   height: 294px;
   position: relative;
+
+  @media (max-width: 1280px) {
+    width: 95%;
+  }
+
+  @include vp-1199 {
+    width: 100%;
+  }
 
   @include vp-767 {
     height: 274px;
   }
 }
 
-.slider__outer-wrapper {
+.slider-wrapper {
   position: relative;
 
   @include vp-1199 {
@@ -30,6 +38,20 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
+  background-color: transparent;
+  border: none;
+
+  &:focus-visible {
+    background-color: rgba(82, 36, 233, 0.2);
+  }
+
+  &:hover {
+    background-color: rgba(82, 36, 233, 0.2);
+  }
+
+  &:active {
+    background-color: rgba(82, 36, 233, 0.1);
+  }
 
   @include vp-767 {
     background-size: 50% 50%;
@@ -40,8 +62,12 @@
   left: -60px;
   transform: scale(-1, 1);
 
-  @media(max-width: 1325px) {
-    left: -20px;
+  @media (max-width: 1280px) {
+    left: -16px;
+  }
+
+  @include vp-1199 {
+    left: -62px;
   }
 
   @include vp-767 {
@@ -52,8 +78,12 @@
 .slider-button-next {
   right: -60px;
 
-  @media(max-width: 1325px) {
-    right: -20px;
+  @media (max-width: 1280px) {
+    right: -16px;
+  }
+
+  @include vp-1199 {
+    right: -62px;
   }
 
   @include vp-767 {

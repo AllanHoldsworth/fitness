@@ -21,4 +21,12 @@
   background-color: $color-default-white;
   width: 25px;
   height: 25px;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }

@@ -133,6 +133,14 @@
   line-height: 21px;
   color: $color-sapphire;
 
+  &:hover {
+    color: #d10a42;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
   @include vp-1199 {
     font-size: 18px;
     line-height: 27px;
@@ -154,6 +162,14 @@
   font-size: 14px;
   line-height: 21px;
   color: $color-sapphire;
+
+  &:hover {
+    color: #d10a42;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 
   @include vp-1199 {
     font-size: 18px;

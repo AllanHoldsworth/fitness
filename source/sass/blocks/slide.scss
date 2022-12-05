@@ -5,13 +5,12 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  overflow: hidden;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: rgba(16, 38, 84, 0.89);
     justify-content: flex-start;
-  }
-
-  @include vp-1199 {
   }
 }
 
@@ -23,7 +22,8 @@
   margin: 0;
 }
 
-.slide:hover .slide__title {
+.slide:hover .slide__title,
+.slide:focus .slide__title {
   margin-top: 36px;
   line-height: 20px;
 }
@@ -36,7 +36,8 @@
   margin-bottom: 32px;
 }
 
-.slide:hover .slide__subtitle {
+.slide:hover .slide__subtitle,
+.slide:focus .slide__subtitle {
   display: block;
 }
 
@@ -57,9 +58,11 @@
 .slide__list {
   display: none;
   padding-left: 51px;
+  margin: 0;
 }
 
-.slide:hover .slide__list {
+.slide:hover .slide__list,
+.slide:focus .slide__list {
   display: block;
 }
 

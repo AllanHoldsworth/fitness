@@ -36,8 +36,8 @@
 }
 
 .hero__inner-wrapper {
-   display: grid;
-   grid-template-columns: minmax(150px, auto) minmax(250px, 310px);
+  display: grid;
+  grid-template-columns: minmax(150px, auto) minmax(250px, 308px);
 
   @include vp-1199 {
     grid-template-columns: 114px 226px;
@@ -102,17 +102,18 @@
 
 .hero__title {
   font-family: $ff-secondary;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 92px;
   text-transform: uppercase;
   line-height: 110px;
   text-align: right;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   color: $color-default-white;
   margin: 0;
 
   @include vp-1199 {
     text-transform: none;
+    letter-spacing: 0.03em;
     font-size: 72px;
     line-height: 86px;
   }
@@ -125,13 +126,13 @@
   grid-column: 2/3;
 
   &:focus-visible {
-    border-image: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
     border-image-slice: 1;
     outline: 2px solid $color-default-black;
   }
 
   &:hover {
-    border-image: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
     border-image-slice: 1;
   }
 

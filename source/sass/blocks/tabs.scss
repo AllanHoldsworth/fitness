@@ -78,6 +78,7 @@
   outline: none;
   color: rgba(16, 38, 84, 0.5);
   margin: 0;
+  user-select: none;
 
   &:first-child {
     padding-left: 0;
@@ -88,11 +89,15 @@
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 1.5px black;
+    box-shadow: 0 0 0 1.5px $color-default-black;
   }
 
   &:hover {
-    color: #D10A42;
+    color: #d10a42;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 
   @include vp-1199 {
@@ -112,17 +117,8 @@
   color: $color-sapphire;
 }
 
-.tabs__body--nojs {
-  display: grid;
-  row-gap: 40px;
-}
-
 .tabs__content {
   display: none;
-}
-
-.tabs__body--nojs .tabs__content {
-  display: block;
 }
 
 .tabs__content--active {
@@ -143,8 +139,10 @@
   }
 
   @include vp-767 {
-    grid-template-columns: 1fr;
     grid-gap: 35px;
+    grid-template-columns: 1fr;
+    max-width: 442px;
+    margin: 0 auto;
   }
 }
 
@@ -157,8 +155,13 @@
   border: 7px solid transparent;
   min-height: 448px;
 
+  &:focus-within {
+    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+    border-image-slice: 1;
+  }
+
   &:hover {
-    border-image: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
     border-image-slice: 1;
   }
 
@@ -170,6 +173,12 @@
     padding: 43px 30px;
     min-height: 384px;
   }
+}
+
+.tabs__item:hover .tabs__link {
+  background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  border: none;
+  color: $color-default-white;
 }
 
 
@@ -274,10 +283,21 @@
   margin-top: 32px;
   min-height: 66px;
 
-  &:hover {
-    background-image: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+  &:focus-visible {
+    outline: 2px solid $color-default-black;
+    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     border: none;
     color: $color-default-white;
+  }
+
+  &:hover {
+    background-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+    border: none;
+    color: $color-default-white;
+  }
+
+  &:active {
+    opacity: 0.8;
   }
 
   @include vp-767 {

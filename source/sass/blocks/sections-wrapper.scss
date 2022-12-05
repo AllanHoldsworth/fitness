@@ -1,7 +1,7 @@
 .sections-wrapper {
   position: relative;
   padding-bottom: 39px;
-  background-image: linear-gradient(to right, $color-sapphire 50%, white 50%);
+  background-image: linear-gradient(to right, $color-sapphire 50%, $color-default-white 50%);
 
   @include vp-1199 {
     background-image: none;
