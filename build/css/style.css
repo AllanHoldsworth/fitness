@@ -1835,7 +1835,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 38px;
 }
 
-.gym__description {
+.gym__title-wrapper p {
   font-weight: 300;
   line-height: 24px;
   margin: 0;
@@ -2434,7 +2434,7 @@ button.swiper-pagination-bullet {
   line-height: 20px;
 }
 
-.slide__subtitle {
+.slide span {
   display: none;
   font-size: 16px;
   line-height: 24px;
@@ -2442,7 +2442,7 @@ button.swiper-pagination-bullet {
   margin-bottom: 32px;
 }
 
-.slide:hover .slide__subtitle {
+.slide:hover span {
   display: block;
 }
 
@@ -2457,23 +2457,23 @@ button.swiper-pagination-bullet {
   height: 100%;
 }
 
-.slide__list {
+.slide ul {
   display: none;
   padding-left: 51px;
   margin: 0;
 }
 
-.slide:hover .slide__list {
+.slide:hover ul {
   display: block;
 }
 
-.slide__item {
+.slide li {
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
 }
 
-.slide__item:not(:last-child) {
+.slide li:not(:last-child) {
   margin-bottom: 13px;
 }
 
@@ -2873,7 +2873,7 @@ button.swiper-pagination-bullet {
   color: #ffffff;
 }
 
-.carousel-slide__text {
+.carousel-slide__text-wrapper p {
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
@@ -3052,51 +3052,37 @@ button.swiper-pagination-bullet {
   padding-left: 57px;
 }
 
-.contacts__subtitle {
+.contacts h3 {
   margin-top: 0;
   margin-bottom: 3px;
   font-size: 16px;
   line-height: 24px;
 }
 
-.contacts__address {
+.contacts address {
   font-style: normal;
   font-size: 14px;
   line-height: 21px;
 }
 
-.contacts__phone {
+.contacts a {
   font-size: 14px;
   line-height: 21px;
   color: #102654;
 }
 
-.contacts__phone:hover {
+.contacts a:hover {
   color: #d10a42;
 }
 
-.contacts__phone:active {
+.contacts a:active {
   opacity: 0.8;
 }
 
-.contacts__description {
+.contacts p {
   font-size: 14px;
   line-height: 21px;
   margin: 0;
-}
-
-.contacts__email {
-  font-size: 14px;
-  line-height: 21px;
-  color: #102654;
-}
-
-.contacts__email:hover {
-  color: #d10a42;
-}
-
-.contacts__email:active {
-  opacity: 0.8;
 }
 
 .footer {
@@ -3373,7 +3359,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 33px;
   }
 
-  .gym__description {
+  .gym__title-wrapper p {
     text-align: center;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -3571,6 +3557,19 @@ button.swiper-pagination-bullet {
 
   .slider-button-next {
     right: -62px;
+  }
+
+  .slide__title {
+    margin-left: 7px;
+  }
+
+  .slide:hover .slide__title {
+    margin-right: 11px;
+    margin-left: 0;
+  }
+
+  .slide span {
+    margin-right: 9px;
   }
 
   .advantages {
@@ -3820,28 +3819,23 @@ button.swiper-pagination-bullet {
     padding-left: 0;
   }
 
-  .contacts__subtitle {
+  .contacts h3 {
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 6px;
   }
 
-  .contacts__address {
+  .contacts address {
     font-size: 18px;
     line-height: 27px;
   }
 
-  .contacts__phone {
+  .contacts a {
     font-size: 18px;
     line-height: 27px;
   }
 
-  .contacts__description {
-    font-size: 18px;
-    line-height: 27px;
-  }
-
-  .contacts__email {
+  .contacts p {
     font-size: 18px;
     line-height: 27px;
   }
@@ -3978,7 +3972,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 23px;
   }
 
-  .gym__description {
+  .gym__title-wrapper p {
     width: 90%;
     -ms-flex-item-align: unset;
     -ms-grid-row-align: unset;
@@ -4154,8 +4148,25 @@ button.swiper-pagination-bullet {
     right: -40px;
   }
 
+  .slide__title {
+    margin-left: 0;
+  }
+
+  .slide:hover .slide__title {
+    margin-right: 0;
+    margin-top: 27px;
+  }
+
+  .slide span {
+    margin-right: 0;
+  }
+
   .slide__image {
     height: 274px;
+  }
+
+  .slide ul {
+    padding-left: 30px;
   }
 
   .advantages {
@@ -4367,7 +4378,7 @@ button.swiper-pagination-bullet {
     padding-left: 102px;
   }
 
-  .carousel-slide__text {
+  .carousel-slide__text-wrapper p {
     text-align: center;
     margin-top: 24px;
   }

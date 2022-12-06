@@ -19,22 +19,48 @@
   line-height: 27px;
   color: $color-default-white;
   margin: 0;
+
+  @include vp-1199 {
+    margin-left: 7px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+  }
 }
 
 .slide:hover .slide__title {
   margin-top: 36px;
   line-height: 20px;
+
+  @include vp-1199 {
+    margin-right: 11px;
+    margin-left: 0;
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+    margin-top: 27px;
+  }
 }
 
-.slide__subtitle {
+.slide span {
   display: none;
   font-size: 16px;
   line-height: 24px;
   color: #b6bdcc;
   margin-bottom: 32px;
+
+  @include vp-1199 {
+    margin-right: 9px;
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+  }
 }
 
-.slide:hover .slide__subtitle {
+.slide:hover span {
   display: block;
 }
 
@@ -52,22 +78,26 @@
   }
 }
 
-.slide__list {
+.slide ul {
   display: none;
   padding-left: 51px;
   margin: 0;
+
+  @include vp-767 {
+    padding-left: 30px;
+  }
 }
 
-.slide:hover .slide__list {
+.slide:hover ul {
   display: block;
 }
 
-.slide__item {
+.slide li {
   font-size: 14px;
   line-height: 21px;
   color: $color-default-white;
 }
 
-.slide__item:not(:last-child) {
+.slide li:not(:last-child) {
   margin-bottom: 13px;
 }

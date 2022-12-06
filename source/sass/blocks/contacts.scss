@@ -104,7 +104,7 @@
   }
 }
 
-.contacts__subtitle {
+.contacts h3 {
   margin-top: 0;
   margin-bottom: 3px;
   font-size: 16px;
@@ -117,7 +117,7 @@
   }
 }
 
-.contacts__address {
+.contacts address {
   font-style: normal;
   font-size: 14px;
   line-height: 21px;
@@ -128,7 +128,7 @@
   }
 }
 
-.contacts__phone {
+.contacts a {
   font-size: 14px;
   line-height: 21px;
   color: $color-sapphire;
@@ -147,29 +147,10 @@
   }
 }
 
-.contacts__description {
+.contacts p {
   font-size: 14px;
   line-height: 21px;
   margin: 0;
-
-  @include vp-1199 {
-    font-size: 18px;
-    line-height: 27px;
-  }
-}
-
-.contacts__email {
-  font-size: 14px;
-  line-height: 21px;
-  color: $color-sapphire;
-
-  &:hover {
-    color: #d10a42;
-  }
-
-  &:active {
-    opacity: 0.8;
-  }
 
   @include vp-1199 {
     font-size: 18px;
