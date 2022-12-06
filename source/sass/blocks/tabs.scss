@@ -6,7 +6,13 @@
   position: relative;
 }
 
-.tabs__head::after {
+.tabs__head-wrapper {
+  width: fit-content;
+  position: relative;
+  margin: 0 auto;
+}
+
+.tabs__head-wrapper::after {
   content: "";
   position: absolute;
   display: flex;
