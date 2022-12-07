@@ -2946,7 +2946,7 @@ button.swiper-pagination-bullet {
   line-height: 16px;
   color: #ffffff;
   background-color: transparent;
-  padding: 5px 10px 5px 0;
+  padding: 5px 10px 5px 5px;
 }
 
 .form__field input:hover {

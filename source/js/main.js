@@ -15,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const video = document.querySelector('.gym__video');
   const playButton = document.querySelector('.gym__play-btn');
   const videoImg = document.querySelector('.gym__video-img');
+  const slides = document.querySelectorAll('.slide');
 
   if (playButton) {
     playButton.addEventListener('click', () => {
@@ -96,6 +97,15 @@ window.addEventListener('DOMContentLoaded', () => {
       nextEl: '.slider-button-next',
       prevEl: '.slider-button-prev',
     },
+  });
+
+  console.log(slides[3]);
+  slides[0].focus();
+
+  slides.forEach((slide) => {
+    slide.onfocus = function () {
+      swiper.slideNext();
+    };
   });
 
   const carousel = new Swiper('.carousel', {
