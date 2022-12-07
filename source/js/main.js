@@ -11,13 +11,10 @@ window.addEventListener('DOMContentLoaded', () => {
   let toggles = document.querySelectorAll('.tabs__toggle');
   let tabs = document.querySelector('.tabs__head');
   let tabsContent = document.querySelectorAll('.tabs__content');
-  // let tabsBody = document.querySelector('.tabs__body');
   const anchor = document.querySelector('a[href="#sub"]');
   const video = document.querySelector('.gym__video');
   const playButton = document.querySelector('.gym__play-btn');
   const videoImg = document.querySelector('.gym__video-img');
-
-  // tabsBody.classList.remove('tabs__body--nojs');
 
   if (playButton) {
     playButton.addEventListener('click', () => {
