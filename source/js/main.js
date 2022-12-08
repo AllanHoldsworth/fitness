@@ -5,7 +5,6 @@ import Swiper, {Navigation, Keyboard} from 'swiper';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
   // Utils
   // ---------------------------------
   let toggles = document.querySelectorAll('.tabs__toggle');
@@ -16,8 +15,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const playButton = document.querySelector('.gym__play-btn');
   const videoImg = document.querySelector('.gym__video-img');
   const slides = document.querySelectorAll('.slide');
+  const carouselSlides = document.querySelectorAll('.carousel-slide');
 
   if (playButton) {
+    playButton.classList.add('gym__play-btn--active');
     playButton.addEventListener('click', () => {
       videoImg.style.display = 'none';
       playButton.style.display = 'none';
@@ -97,16 +98,25 @@ window.addEventListener('DOMContentLoaded', () => {
       nextEl: '.slider-button-next',
       prevEl: '.slider-button-prev',
     },
+
+    on: {
+      init() {
+        const duplicates = document.querySelectorAll('.swiper-slide-duplicate');
+        duplicates.forEach((duplicate) => {
+          duplicate.setAttribute('tabindex', '-1');
+        });
+      },
+    },
   });
 
-  console.log(slides[3]);
-  slides[0].focus();
-
-  slides.forEach((slide) => {
+  slides.forEach((slide, i) => {
     slide.onfocus = function () {
-      swiper.slideNext();
+      if (slides.length - i >= slides.length / 2) {
+        swiper.slideTo(i + 4);
+      }
     };
   });
+
 
   const carousel = new Swiper('.carousel', {
     direction: 'horizontal',
@@ -117,6 +127,12 @@ window.addEventListener('DOMContentLoaded', () => {
       nextEl: '.carousel-button-next',
       prevEl: '.carousel-button-prev',
     },
+  });
+
+  carouselSlides.forEach((slide, i) => {
+    slide.onfocus = function () {
+      swiper.slideTo(i);
+    };
   });
 
   iosVhFix();

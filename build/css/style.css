@@ -1868,6 +1868,7 @@ button.swiper-pagination-bullet {
 }
 
 .gym__play-btn {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1900,6 +1901,10 @@ button.swiper-pagination-bullet {
 
 .gym__play-btn:active {
   opacity: 0.6;
+}
+
+.gym__play-btn--active {
+  display: block;
 }
 
 .gym__image {
