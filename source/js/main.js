@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   let toggles = document.querySelectorAll('.tabs__toggle');
   let tabs = document.querySelector('.tabs__head');
+  let tabsBody = document.querySelector('.tabs__body');
   let tabsContent = document.querySelectorAll('.tabs__content');
   const anchor = document.querySelector('a[href="#sub"]');
   const video = document.querySelector('.gym__video');
@@ -16,6 +17,11 @@ window.addEventListener('DOMContentLoaded', () => {
   const videoImg = document.querySelector('.gym__video-img');
   const slides = document.querySelectorAll('.slide');
   const carouselSlides = document.querySelectorAll('.carousel-slide');
+
+  if (tabsBody) {
+    tabsBody.classList.remove('tabs__body--nojs');
+  }
+
 
   if (playButton) {
     playButton.classList.add('gym__play-btn--active');

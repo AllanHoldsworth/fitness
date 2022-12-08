@@ -127,6 +127,10 @@
   display: none;
 }
 
+.tabs__body--nojs .tabs__content {
+  display: block;
+}
+
 .tabs__content--active {
   display: block;
 }
@@ -203,6 +207,8 @@
 }
 
 .tabs__body {
+  display: grid;
+  grid-gap: 40px;
   margin-top: 41px;
 
   @include vp-1199 {
