@@ -191,7 +191,7 @@
   }
 }
 
-.offers__offer-wrapper--first {
+.offers__offer-wrapper:first-child {
   grid-row: 1/2;
   grid-column: 2/3;
 
@@ -203,12 +203,6 @@
   @include vp-767 {
     grid-row: unset;
     grid-column: unset;
-  }
-}
-
-.offers__offer-wrapper--second {
-  @include vp-767 {
-    grid-row: 4/5;
   }
 }
 
@@ -255,8 +249,3 @@
   background-color: $color-resolution-blue;
 }
 
-.offers__offer-wrapper--first .offers__description {
-  @include vp-1199 {
-    width: 88%;
-  }
-}

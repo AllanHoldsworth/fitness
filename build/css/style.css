@@ -2423,11 +2423,35 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  overflow: hidden;
 }
 
-.slide:hover {
+.slide__mask {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  max-height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  bottom: 0;
+}
+
+.slide:hover .slide__mask,
+.slide:focus .slide__mask {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   background-color: rgba(16, 38, 84, 0.89);
+  padding: 30px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
@@ -2438,16 +2462,28 @@ button.swiper-pagination-bullet {
   font-size: 18px;
   line-height: 27px;
   color: #ffffff;
-  margin: 0;
+  margin-bottom: 0;
+  margin-top: auto;
+  text-align: center;
 }
 
 .slide:hover .slide__title {
-  margin-top: 36px;
+  display: none;
+}
+
+.slide__mask-title {
+  text-align: center;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 26px;
+  margin-bottom: 0;
   line-height: 20px;
 }
 
 .slide span {
-  display: none;
+  display: block;
   font-size: 16px;
   line-height: 24px;
   color: #b6bdcc;
@@ -2470,13 +2506,9 @@ button.swiper-pagination-bullet {
 }
 
 .slide ul {
-  display: none;
-  padding-left: 51px;
-  margin: 0;
-}
-
-.slide:hover ul {
   display: block;
+  padding-left: 40px;
+  margin: 0;
 }
 
 .slide li {
@@ -2771,7 +2803,7 @@ button.swiper-pagination-bullet {
   min-height: 211px;
 }
 
-.offers__offer-wrapper--first {
+.offers__offer-wrapper:first-child {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
@@ -2829,13 +2861,20 @@ button.swiper-pagination-bullet {
 
 .carousel {
   width: 560px;
-  height: 242px;
+  min-height: 242px;
+  height: auto;
 }
 
-.carousel-wrapper {
+.carousel-container {
   position: relative;
   width: 662px;
   margin: 0 auto;
+}
+
+.carousel-wrapper {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .carousel-button-prev {
@@ -2852,17 +2891,22 @@ button.swiper-pagination-bullet {
 .carousel-slide {
   position: relative;
   width: 560px;
-  height: 100%;
+  min-height: 242px;
+  height: auto;
   background-color: #1c3374;
-  overflow: auto;
   padding: 56px 60px 30px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.carousel-slide__image-wrapper {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
 .carousel-slide__image {
-  width: 289px;
+  width: 100%;
   height: 80px;
   margin-top: 7px;
 }
@@ -3575,7 +3619,7 @@ button.swiper-pagination-bullet {
     margin-left: 7px;
   }
 
-  .slide:hover .slide__title {
+  .slide__mask-title {
     margin-right: 11px;
     margin-left: 0;
   }
@@ -3705,17 +3749,13 @@ button.swiper-pagination-bullet {
     width: 100%;
   }
 
-  .offers__offer-wrapper--first {
+  .offers__offer-wrapper:first-child {
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1/2;
-  }
-
-  .offers__offer-wrapper--first .offers__description {
-    width: 88%;
   }
 
   .reviews {
@@ -4164,9 +4204,9 @@ button.swiper-pagination-bullet {
     margin-left: 0;
   }
 
-  .slide:hover .slide__title {
+  .slide__mask-title {
     margin-right: 0;
-    margin-top: 27px;
+    margin-top: 16px;
   }
 
   .slide span {
@@ -4178,7 +4218,7 @@ button.swiper-pagination-bullet {
   }
 
   .slide ul {
-    padding-left: 30px;
+    padding-left: 20px;
   }
 
   .advantages {
@@ -4331,15 +4371,9 @@ button.swiper-pagination-bullet {
     align-items: center;
   }
 
-  .offers__offer-wrapper--first {
+  .offers__offer-wrapper:first-child {
     grid-row: unset;
     grid-column: unset;
-  }
-
-  .offers__offer-wrapper--second {
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
-    grid-row: 4/5;
   }
 
   .offers__offer-wrapper .offers__description {
@@ -4351,7 +4385,7 @@ button.swiper-pagination-bullet {
   }
 
   .reviews {
-    padding-bottom: 71px;
+    padding-bottom: 70px;
   }
 
   .reviews__title {
@@ -4360,15 +4394,15 @@ button.swiper-pagination-bullet {
 
   .carousel {
     width: 226px;
-    height: 335px;
   }
 
-  .carousel-wrapper {
+  .carousel-container {
     width: 290px;
   }
 
   .carousel-slide {
     width: 226px;
+    min-height: 335px;
     padding: 47px 22px 20px 22px;
   }
 

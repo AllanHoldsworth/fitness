@@ -1,6 +1,7 @@
 .carousel {
   width: 560px;
-  height: 242px;
+  min-height: 242px;
+  height: auto;
 
   @include vp-1199 {
     width: 566px;
@@ -8,11 +9,10 @@
 
   @include vp-767 {
     width: 226px;
-    height: 335px;
   }
 }
 
-.carousel-wrapper {
+.carousel-container {
   position: relative;
   width: 662px;
   margin: 0 auto;
@@ -20,6 +20,10 @@
   @include vp-767 {
     width: 290px;
   }
+}
+
+.carousel-wrapper {
+  align-items: center;
 }
 
 .carousel-button-prev {

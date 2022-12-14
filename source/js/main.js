@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', () => {
         initialSlide: 2,
       },
 
-      766: {
+      767: {
         slidesPerView: '2',
         spaceBetween: 30,
         initialSlide: 2,
@@ -125,6 +125,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   const carousel = new Swiper('.carousel', {
+    autoHeight: true,
+    observer: true,
+    observeParents: true,
     direction: 'horizontal',
     loop: false,
     slidesPerView: '1',
