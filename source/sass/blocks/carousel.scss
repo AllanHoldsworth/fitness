@@ -22,8 +22,9 @@
   }
 }
 
-.carousel-wrapper {
+.reviews .carousel-wrapper {
   align-items: center;
+  transition: transform;
 }
 
 .carousel-button-prev {

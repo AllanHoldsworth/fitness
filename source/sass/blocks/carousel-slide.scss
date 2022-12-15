@@ -6,6 +6,7 @@
   background-color: $color-resolution-blue;
   padding: 56px 60px 30px 60px;
   display: flex;
+  transition: none !important;
 
   @include vp-1199 {
     width: 566px;

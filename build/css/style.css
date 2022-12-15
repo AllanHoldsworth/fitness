@@ -2474,7 +2474,6 @@ button.swiper-pagination-bullet {
 .slide__mask-title {
   text-align: center;
   font-size: 18px;
-  line-height: 27px;
   font-weight: 700;
   color: #ffffff;
   margin-top: 26px;
@@ -2871,10 +2870,15 @@ button.swiper-pagination-bullet {
   margin: 0 auto;
 }
 
-.carousel-wrapper {
+.reviews .carousel-wrapper {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-transition: -webkit-transform;
+  transition: -webkit-transform;
+  -o-transition: transform;
+  transition: transform;
+  transition: transform, -webkit-transform;
 }
 
 .carousel-button-prev {
@@ -2898,6 +2902,9 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
 }
 
 .carousel-slide__image-wrapper {
